@@ -6,9 +6,9 @@ WORKDIR /backend
 # Copy package.json to root directory inside Docker container of Strapi app
 COPY package.json .
 
+COPY . .
 RUN npm install
 
-COPY . .
 RUN npm run build
 
 EXPOSE 1337
